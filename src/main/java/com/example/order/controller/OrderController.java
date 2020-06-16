@@ -26,7 +26,7 @@ public class OrderController {
     HttpHeaders headers = new HttpHeaders();
     headers.setContentType(MediaType.APPLICATION_JSON);
 	HttpEntity entity = new HttpEntity<>(null,headers);
-	String url = "http://localhost:8080/userorders/"+userid;
+	String url = "http://10.8.3.43:8080/userorders/"+userid;
 	ResponseEntity<User> user = template.exchange(url,HttpMethod.GET,entity ,User.class);
 
          return user;
